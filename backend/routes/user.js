@@ -2,10 +2,10 @@ const express = require("express")
 const router = express.Router()
 
 const bcrypt = require("bcrypt")
+const axios = require("axios");
 const jwt = require("jsonwebtoken")
 
 const User = require("../models/User")
-const { default: axios } = require("axios")
 
 const COOKIE_NAME = 'token'
 const isProd = process.env.NODE_ENV === 'production'
@@ -139,8 +139,8 @@ router.post('/logout', async (req, res) => {
 
     res.clearCookie(COOKIE_NAME, {
       httpOnly: true,
-      secure: SECURE,
       sameSite: SAME_SITE,
+      secure: SECURE,
       path: COOKIE_PATH
     })
 
