@@ -4,7 +4,11 @@ header {
     width: 100%;
     transition: all .3s;
 
-
+.fixed-top{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+}
     &.scroll {
         background-color: var(--bg);
         .inner {

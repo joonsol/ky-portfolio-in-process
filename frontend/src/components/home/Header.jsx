@@ -31,6 +31,7 @@ const Header = () => {
 
         </div>
       </div>
+      <div className="fixed-top">fixed</div>
     </header>
   )
 }
