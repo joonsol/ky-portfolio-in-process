@@ -24,6 +24,9 @@ section {
         // min-height: 100vh;
 
         margin: auto;
+        @media screen and (max-width:1599px){
+             padding: 1rem 2rem;   
+        }
 
         .btn {
             background-color: var(--primary);
