@@ -9,6 +9,11 @@
         transform: translateX(11vw);
         position: relative;
 
+        @media screen and (max-width:1599px) {
+            transform: translateX(0);
+            align-self: flex-start;
+        }
+
         .star-spin {
             position: absolute;
             left: -10rem;
@@ -40,6 +45,7 @@
                     &:nth-child(even) {
                         background-color: var(--gray100);
                     }
+
                     &:hover {
                         background-color: var(--primary);
                         color: var(--bg);
