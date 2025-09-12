@@ -54,10 +54,10 @@ router.get('/:id', async (req, res) => {
 })
 router.put('/:id', async (req, res) => {
     try {
-        const {name, email, phone, message, status }=req.body
+        const { status }=req.body
         const contact = await Contact.findByIdAndUpdate(
             req.params.id,
-            {name, email, phone, message, status },
+            { status },
             {new:true}
         )
         if(!contact){
